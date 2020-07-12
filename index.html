@@ -3,16 +3,34 @@
 
 <head>
     <title>Spotify</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="script.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/cd801faa65.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 </head>
 
 <body>
+
+    <!-- AUDIO FILES -->
+
+    <audio id="tiwasavage_attention">
+        <source src="audio/tiwasavage_attention.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="wizkid_blow">
+        <source src="audio/wizkid_blow.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- END OF AUDIO FILES -->
+
+
+
 
     <!-- START OF PLAYER -->
 
@@ -21,11 +39,12 @@
         <div id="content">
 
             <figure>
-                <img src="album.jpg">
+                <img id="singleCover" src="album.jpg">
             </figure>
 
-            <h1>DJ Larni</h1>
-            <p>10 v 10 Warm Up Set</p>
+            <p id="songTitle"></p>
+            <h1 id="artistName"></h1>
+
 
             <div id="bar"></div>
 
@@ -34,19 +53,29 @@
                 <p>00:00</p>
             </div>
 
+            <div id="controls">
 
-            <div id="playcontainer">
-                <i id="play" class="fas fa-play"></i>
+                <div id="backContainer">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+
+                <div id="playContainer">
+                    <i id="playButton" class="fas fa-play"></i>
+                </div>
+
+                <div id="pauseContainer">
+                    <i id="pauseButton" class="fas fa-pause"></i>
+                </div>
+
+                <div id="forwardContainer">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+
             </div>
 
-            <div id="pausecontainer">
-                <i id="pause" class="fas fa-pause"></i>
-            </div>
+            <p id="speed" style="padding-top: 20px;">1x</p>
+
         </div>
-
-        <i class="fas fa-times" id="close"></i>
-
-
 
 
 
@@ -70,35 +99,35 @@
 
             <div class="scrolling-container">
 
-                <div class="card" id="cardOne">
+                <div class="card" id="music_cardOne">
                     <img src="tiwa.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <h4><b>Heading</b></h4>
-                        <p>Description</p>
+                        <h4>Attention</h4>
+                        <p>Tiwa Savage</p>
                     </div>
                 </div>
 
-                <div class="card" id="cardTwo">
+                <div class="card" id="music_cardTwo">
                     <img src="wizkid.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
+                        <h4>Blow</h4>
+                        <p>Wizkid</p>
                     </div>
                 </div>
 
-                <div class="card" id="cardThree">
+                <div class="card" id="music_cardThree">
                     <img src="kranium.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
+                        <h4><b>Gal Policy</b></h4>
+                        <p>Kranium</p>
                     </div>
                 </div>
 
-                <div class="card" id="cardFour">
+                <div class="card" id="music_cardFour">
                     <img src="snoh.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
+                        <h4><b>Song 4</b></h4>
+                        <p>Snoh Algera</p>
                     </div>
                 </div>
 
@@ -111,8 +140,8 @@
 
         <!-- BOX TWO -->
 
-        
-        <div id="boxOne">
+
+        <div id="boxTwo">
 
             <h1 id="test">Podcast Favourites</h1>
 
@@ -121,11 +150,11 @@
                 <div class="card" id="cardOne">
                     <img src="chaleletsgist.jfif" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <h4><b>Heading</b></h4>
-                        <p>Description</p>
+                        <h4><b>Chale Let's Gist</b></h4>
+                        <p>The FC</p>
                     </div>
                 </div>
-                
+
                 <div class="card" id="cardOne">
                     <img src="chaleletsgist.jfif" alt="Avatar" style="width:100%">
                     <div class="container">
@@ -135,12 +164,12 @@
                 </div>
 
 
-        </div>
+            </div>
 
-        <!-- END OF BOX TWO -->
+            <!-- END OF BOX TWO -->
 
 
-        
+
 
 
 
