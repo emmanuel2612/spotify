@@ -101,6 +101,9 @@ window.onload = () => {
 
     cardOne.onclick = () => {
 
+        playButton.style.display = "none";
+        pauseButton.style.display = "flex"; 
+
         playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('tiwa.gif') center";
 
         
@@ -223,6 +226,9 @@ window.onload = () => {
 
     cardTwo.onclick = () => {
 
+        playButton.style.display = "none";
+        pauseButton.style.display = "flex";
+
         playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('wizkid.gif') center";
 
         songTwo();
@@ -326,6 +332,9 @@ window.onload = () => {
     }
 
     cardThree.onclick = () => {
+
+        playButton.style.display = "none";
+        pauseButton.style.display = "flex";
 
         playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('kranium.gif') center";
 
@@ -470,6 +479,9 @@ window.onload = () => {
     }
 
     cardFour.onclick = () => {
+
+        playButton.style.display = "none";
+        pauseButton.style.display = "flex";
 
         playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('snoh.gif') center";
 
