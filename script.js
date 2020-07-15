@@ -40,11 +40,73 @@ window.onload = () => {
 
     let speed = document.getElementById("speed");
 
-    const backButton = document.getElementById("backwardContainer");
+    const backButton = document.getElementById("backContainer");
     const forwardButton = document.getElementById("forwardContainer");
 
     var playerBarContainer = document.getElementById("playerBarContainer");
     var playerBarImage = document.getElementById("playerBarImage");
+
+    var heart = document.getElementById("heart");
+
+    var added = document.getElementById("added");
+
+
+    heart.onclick = () =>{
+
+        added.style.transform = "scale(0,0)";
+      
+
+        if (!heart.classList.contains("clickHeart")){
+            heart.classList.add("clickHeart");
+
+            removed.style.transform = "scale(0,0)";
+
+            setTimeout(() => {
+                removed.style.display = "none";
+            }, 200);
+
+            setTimeout(() => {
+                added.style.transform = "scale(1,1)";
+            }, 450);
+
+            setTimeout(() => {
+                added.style.display = "flex";
+            }, 350);
+
+            setTimeout(() => {
+                added.style.transform = "scale(0,0)";
+            }, 3000);
+
+            console.log("I just selected the heart");
+        }
+
+        else if (heart.classList.contains("clickHeart")){
+            heart.classList.remove("clickHeart");
+            console.log("I just removed the heart");
+
+            added.style.transform = "scale(0,0)";
+
+            setTimeout(() => {
+                added.style.display = "none";
+            }, 200);
+
+
+
+            setTimeout(() => {
+                removed.style.transform = "scale(1,1)";
+            }, 450);
+
+            setTimeout(() => {
+                removed.style.display = "flex";
+            }, 350);
+
+            setTimeout(() => {
+                removed.style.transform = "scale(0,0)";
+            }, 3000);
+
+        }
+
+}
 
 
 
@@ -72,9 +134,13 @@ window.onload = () => {
 
 
 
+
+
     /* TIWA SAVAGE*/
 
     const songOne = () => {
+
+        stopAllAudio();
 
         const tiwasavage_attention = document.getElementById("tiwasavage_attention");
 
@@ -100,11 +166,8 @@ window.onload = () => {
         }
 
 
-    }
 
-
-    cardOne.onclick = () => {
-        
+            
         for(var i = 0; i < aristNamePlayer.length; i++) {
             aristNamePlayer[i].innerHTML = "Tiwa Savage";
         }
@@ -127,14 +190,12 @@ window.onload = () => {
 
         }, 500);
 
-        songOne();
+       
 
         playerPage.style.transform = "translateY(0%)";
 
 
-
-        stopAllAudio();
-
+      
 
 
 
@@ -179,15 +240,21 @@ window.onload = () => {
 
         }
 
+         /* NEXT TRACK */
 
-        /* NEXT TRACK */
+         forwardButton.onclick = () => {
+            tiwasavage_attention.pause();
+            tiwasavage_attention.currentTime = 0; 
+            songTwo();
+    }
 
-        forwardButton.onclick = () => {
-            tiwasavage_attention.
 
-                songTwo();
+    }
 
-        }
+
+    cardOne.onclick = () => {
+
+        songOne();
 
 
 
@@ -199,16 +266,11 @@ window.onload = () => {
 
 
 
-
-
-
-
-
-
-
     /* WIZKID */
 
     const songTwo = () => {
+
+        stopAllAudio();
 
         const wizkid_blow = document.getElementById("wizkid_blow");
 
@@ -235,12 +297,6 @@ window.onload = () => {
         }
 
 
-
-
-    }
-
-    cardTwo.onclick = () => {
-
         for(var i = 0; i < aristNamePlayer.length; i++) {
             aristNamePlayer[i].innerHTML = "Wizkid";
         }
@@ -254,25 +310,7 @@ window.onload = () => {
 
         playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('wizkid.gif') center";
 
-        songTwo();
-
         playerPage.style.transform = "translateY(0%)";
-
-
-
-
-        stopAllAudio();
-
-        setTimeout(() => {
-            playerBarContainer.style.display = "flex";
-            playerBarImage.src = "wizkid.gif";
-
-        }, 500);
-
-
-
-
-        /* CHANGE SPEED */
 
         speed.onclick = () => {
 
@@ -313,13 +351,42 @@ window.onload = () => {
 
         }
 
+            setTimeout(() => {
+                playerBarContainer.style.display = "flex";
+                playerBarImage.src = "wizkid.gif";
+    
+            }, 500);
 
-        /* NEXT TRACK */
 
+             /* NEXT TRACK */
+
+        forwardButton.onclick = () => {
+            wizkid_blow.pause();
+            wizkid_blow.currentTime = 0; 
+            songThree();
+    }
+
+     /* LAST TRACK */
+
+        backButton.onclick = () => {
+        wizkid_blow.pause();
+        wizkid_blow.currentTime = 0; 
+        songOne();
+}
+            
 
 
 
     }
+
+    cardTwo.onclick = () => {
+
+        songTwo();
+
+    
+        
+
+        } 
 
     /*END OF WIZKID*/
 
@@ -330,6 +397,8 @@ window.onload = () => {
     /* KRANIUM */
 
     const songThree = () => {
+
+        stopAllAudio();
 
         const kranium_galpolicy = document.getElementById("kranium_galpolicy");
 
@@ -355,13 +424,7 @@ window.onload = () => {
             pauseButton.style.display = "flex";
         }
 
-
-
-
-    }
-
-    cardThree.onclick = () => {
-
+        
         for(var i = 0; i < aristNamePlayer.length; i++) {
             aristNamePlayer[i].innerHTML = "Kranium";
         }
@@ -375,14 +438,10 @@ window.onload = () => {
 
         playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('kranium.gif') center";
 
-        songThree();
 
         playerPage.style.transform = "translateY(0%)";
 
-
-
-        stopAllAudio();
-
+        
         setTimeout(() => {
             playerBarContainer.style.display = "flex";
             playerBarImage.src = "kranium.gif";
@@ -432,6 +491,31 @@ window.onload = () => {
             }
 
         }
+
+         /* NEXT TRACK */
+
+         forwardButton.onclick = () => {
+            kranium_galpolicy.pause();
+            kranium_galpolicy.currentTime = 0; 
+            songFour();
+    }
+
+    backButton.onclick = () => {
+        kranium_galpolicy.pause();
+        kranium_galpolicy.currentTime = 0; 
+        songTwo();
+    }
+
+
+
+
+
+    }
+
+    cardThree.onclick = () => {
+
+        songThree();
+
 
 
         /* NEXT TRACK */
@@ -492,6 +576,8 @@ window.onload = () => {
 
     const songFour = () => {
 
+        stopAllAudio();
+
         const snoh_dying = document.getElementById("snoh_dying");
 
         aristNamePlayer.innerHTML = "Snoh Aalegra";
@@ -516,13 +602,7 @@ window.onload = () => {
             pauseButton.style.display = "flex";
         }
 
-
-
-
-    }
-
-    cardFour.onclick = () => {
-
+        
         for(var i = 0; i < aristNamePlayer.length; i++) {
             aristNamePlayer[i].innerHTML = "Snoh Aalegera";
         }
@@ -536,11 +616,11 @@ window.onload = () => {
 
         playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('snoh.gif') center";
 
-        songFour();
+       
 
         playerPage.style.transform = "translateY(0%)";
 
-        stopAllAudio();
+        
 
 
         setTimeout(() => {
@@ -591,10 +671,30 @@ window.onload = () => {
 
         }
 
+         /* NEXT TRACK */
+
+         forwardButton.onclick = () => {
+            snoh_dying.pause();
+            snoh_dying.currentTime = 0; 
+            songOne();
+    }
+
+    backButton.onclick = () => {
+        snoh_dying.pause();
+        snoh_dying.currentTime = 0; 
+        songThree();
+    }
+
+
+
+
+    }
+
+    cardFour.onclick = () => {
+
+        songFour();
 
         /* NEXT TRACK */
-
-
 
 
     }
