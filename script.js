@@ -35,8 +35,8 @@ window.onload = () => {
     const playButton = document.getElementById("playContainer");
     const pauseButton = document.getElementById("pauseContainer");
 
-    let aristNamePlayer = document.getElementById("artistName");
-    let songTitlePlayer = document.getElementById("songTitle");
+    let aristNamePlayer = document.getElementsByClassName("artistName");
+    let songTitlePlayer = document.getElementsByClassName("songTitle");
 
     let speed = document.getElementById("speed");
 
@@ -44,6 +44,7 @@ window.onload = () => {
     const forwardButton = document.getElementById("forwardContainer");
 
     var playerBarContainer = document.getElementById("playerBarContainer");
+    var playerBarImage = document.getElementById("playerBarImage");
 
 
 
@@ -63,6 +64,10 @@ window.onload = () => {
 
     /* END OF STOP AUDIO */
 
+    playerBarContainer.onclick = () =>{
+        playerPage.style.transform = "translate(0%)";
+    }
+
 
 
 
@@ -73,8 +78,7 @@ window.onload = () => {
 
         const tiwasavage_attention = document.getElementById("tiwasavage_attention");
 
-        aristNamePlayer.innerHTML = "Tiwa Savage";
-        songTitlePlayer.innerHTML = "Attention";
+
 
         setTimeout(() => {
             tiwasavage_attention.play();
@@ -100,6 +104,15 @@ window.onload = () => {
 
 
     cardOne.onclick = () => {
+        
+        for(var i = 0; i < aristNamePlayer.length; i++) {
+            aristNamePlayer[i].innerHTML = "Tiwa Savage";
+        }
+
+        for(var i = 0; i < songTitlePlayer.length; i++) {
+            songTitlePlayer[i].innerHTML = "Attention";
+        }
+
 
         playButton.style.display = "none";
         pauseButton.style.display = "flex"; 
@@ -109,7 +122,9 @@ window.onload = () => {
         
 
         setTimeout(() => {
-            playerBarContainer.style.display = "block";
+            playerBarContainer.style.display = "flex";
+            playerBarImage.src = "tiwa.gif";
+
         }, 500);
 
         songOne();
@@ -226,6 +241,14 @@ window.onload = () => {
 
     cardTwo.onclick = () => {
 
+        for(var i = 0; i < aristNamePlayer.length; i++) {
+            aristNamePlayer[i].innerHTML = "Wizkid";
+        }
+
+        for(var i = 0; i < songTitlePlayer.length; i++) {
+            songTitlePlayer[i].innerHTML = "Blow";
+        }
+
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
@@ -239,6 +262,12 @@ window.onload = () => {
 
 
         stopAllAudio();
+
+        setTimeout(() => {
+            playerBarContainer.style.display = "flex";
+            playerBarImage.src = "wizkid.gif";
+
+        }, 500);
 
 
 
@@ -333,6 +362,14 @@ window.onload = () => {
 
     cardThree.onclick = () => {
 
+        for(var i = 0; i < aristNamePlayer.length; i++) {
+            aristNamePlayer[i].innerHTML = "Kranium";
+        }
+
+        for(var i = 0; i < songTitlePlayer.length; i++) {
+            songTitlePlayer[i].innerHTML = "Gal Policy";
+        }
+
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
@@ -345,6 +382,12 @@ window.onload = () => {
 
 
         stopAllAudio();
+
+        setTimeout(() => {
+            playerBarContainer.style.display = "flex";
+            playerBarImage.src = "kranium.gif";
+
+        }, 500);
 
 
 
@@ -480,6 +523,14 @@ window.onload = () => {
 
     cardFour.onclick = () => {
 
+        for(var i = 0; i < aristNamePlayer.length; i++) {
+            aristNamePlayer[i].innerHTML = "Snoh Aalegera";
+        }
+
+        for(var i = 0; i < songTitlePlayer.length; i++) {
+            songTitlePlayer[i].innerHTML = "Dying 4 Your Love";
+        }
+
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
@@ -491,6 +542,12 @@ window.onload = () => {
 
         stopAllAudio();
 
+
+        setTimeout(() => {
+            playerBarContainer.style.display = "flex";
+            playerBarImage.src = "snoh.gif";
+
+        }, 500);
 
 
         /* CHANGE SPEED */
