@@ -35,9 +35,6 @@ window.onload = () => {
         snohGif.src = "snoh.gif";
     }
 
-
-
-
     /* Pre-Load Images */
 
 
@@ -54,7 +51,7 @@ window.onload = () => {
     const playButton = document.getElementById("playContainer");
     const pauseButton = document.getElementById("pauseContainer");
 
-    let aristNamePlayer = document.getElementsByClassName("artistName");
+    let artistNamePlayer = document.getElementsByClassName("artistName");
     let songTitlePlayer = document.getElementsByClassName("songTitle");
 
     let speed = document.getElementById("speed");
@@ -133,10 +130,10 @@ window.onload = () => {
 
     const stopAllAudio = () => {
 
-        var audio = document.getElementsByTagName('audio');
+        var audio = document.getElementsByTagName('audio');  /* Get all <audio> HTML tags */
 
-        for (i = 0; i < audio.length; i++) audio[i].pause();
-        for (i = 0; i < audio.length; i++) audio[i].currentTime = 0;
+        for (i = 0; i < audio.length; i++) audio[i].pause(); /* Iteration */
+        for (i = 0; i < audio.length; i++) audio[i].currentTime = 0; /* Iteration */
 
 
     };
@@ -187,8 +184,8 @@ window.onload = () => {
 
 
             
-        for(var i = 0; i < aristNamePlayer.length; i++) {
-            aristNamePlayer[i].innerHTML = "Tiwa Savage";
+        for(var i = 0; i < artistNamePlayer.length; i++) {
+            artistNamePlayer[i].innerHTML = "Tiwa Savage";
         }
 
         for(var i = 0; i < songTitlePlayer.length; i++) {
@@ -265,6 +262,8 @@ window.onload = () => {
             tiwasavage_attention.pause();
             tiwasavage_attention.currentTime = 0; 
             songTwo();
+
+            heart.classList.remove("clickHeart");
     }
 
 
@@ -293,7 +292,7 @@ window.onload = () => {
 
         const wizkid_blow = document.getElementById("wizkid_blow");
 
-        aristNamePlayer.innerHTML = "Wizkid";
+        artistNamePlayer.innerHTML = "Wizkid";
         songTitlePlayer.innerHTML = "Blow";
 
         setTimeout(() => {
@@ -316,8 +315,8 @@ window.onload = () => {
         }
 
 
-        for(var i = 0; i < aristNamePlayer.length; i++) {
-            aristNamePlayer[i].innerHTML = "Wizkid";
+        for(var i = 0; i < artistNamePlayer.length; i++) {
+            artistNamePlayer[i].innerHTML = "Wizkid";
         }
 
         for(var i = 0; i < songTitlePlayer.length; i++) {
@@ -383,6 +382,8 @@ window.onload = () => {
             wizkid_blow.pause();
             wizkid_blow.currentTime = 0; 
             songThree();
+
+            heart.classList.remove("clickHeart");
     }
 
      /* LAST TRACK */
@@ -391,6 +392,8 @@ window.onload = () => {
         wizkid_blow.pause();
         wizkid_blow.currentTime = 0; 
         songOne();
+
+        heart.classList.remove("clickHeart");
 }
             
 
@@ -421,7 +424,7 @@ window.onload = () => {
 
         const kranium_galpolicy = document.getElementById("kranium_galpolicy");
 
-        aristNamePlayer.innerHTML = "Kranium";
+        artistNamePlayer.innerHTML = "Kranium";
         songTitlePlayer.innerHTML = "Gal Policy";
 
         setTimeout(() => {
@@ -444,8 +447,8 @@ window.onload = () => {
         }
 
         
-        for(var i = 0; i < aristNamePlayer.length; i++) {
-            aristNamePlayer[i].innerHTML = "Kranium";
+        for(var i = 0; i < artistNamePlayer.length; i++) {
+            artistNamePlayer[i].innerHTML = "Kranium";
         }
 
         for(var i = 0; i < songTitlePlayer.length; i++) {
@@ -517,12 +520,16 @@ window.onload = () => {
             kranium_galpolicy.pause();
             kranium_galpolicy.currentTime = 0; 
             songFour();
+
+            heart.classList.remove("clickHeart");
     }
 
     backButton.onclick = () => {
         kranium_galpolicy.pause();
         kranium_galpolicy.currentTime = 0; 
         songTwo();
+
+        heart.classList.remove("clickHeart");
     }
 
 
@@ -599,7 +606,7 @@ window.onload = () => {
 
         const snoh_dying = document.getElementById("snoh_dying");
 
-        aristNamePlayer.innerHTML = "Snoh Aalegra";
+        artistNamePlayer.innerHTML = "Snoh Aalegra";
         songTitlePlayer.innerHTML = "Dying 4 Your Love";
 
         setTimeout(() => {
@@ -622,8 +629,8 @@ window.onload = () => {
         }
 
         
-        for(var i = 0; i < aristNamePlayer.length; i++) {
-            aristNamePlayer[i].innerHTML = "Snoh Aalegera";
+        for(var i = 0; i < artistNamePlayer.length; i++) {
+            artistNamePlayer[i].innerHTML = "Snoh Aalegera";
         }
 
         for(var i = 0; i < songTitlePlayer.length; i++) {
@@ -696,12 +703,16 @@ window.onload = () => {
             snoh_dying.pause();
             snoh_dying.currentTime = 0; 
             songOne();
+
+            heart.classList.remove("clickHeart");
     }
 
     backButton.onclick = () => {
         snoh_dying.pause();
         snoh_dying.currentTime = 0; 
         songThree();
+
+        heart.classList.remove("clickHeart");
     }
 
 
