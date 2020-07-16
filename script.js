@@ -802,7 +802,7 @@ window.onload = () => {
 
 
 
-    /* DRAG DOWN (PAN) GESTURES 
+    /* DRAG DOWN (PAN) GESTURES */
 
 
     // create a simple instance
@@ -819,8 +819,24 @@ window.onload = () => {
 
         let mousePosition = event.clientY; // Get Position of mouse
 
+        let playerPagePosition = playerPage.offsetTop;
+
 
         playerPage.style.transform = "translateY(" + mousePosition + "px)"; //Player is positioned wherever mouse is
+
+        playerPage.onmouseup = () => {
+
+            if (playerPagePosition <= 50) {
+                
+                playerPage.style.transform = "translate(0%)";
+
+            }
+
+            else {
+                playerPage.style.transform = "translate(100%)";
+            }
+
+        }
 
 
 
@@ -831,7 +847,7 @@ window.onload = () => {
 
         }); 
 
-    // END OF DRAG DOWN GESTURES  */
+    // END OF DRAG DOWN GESTURES 
 
 
 
