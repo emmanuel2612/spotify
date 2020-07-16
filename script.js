@@ -21,6 +21,25 @@ window.onload = () => {
     /* END OF MUSIC OBJECTS */
 
 
+    /* Pre-Load Images */ 
+
+    if (document.images) {
+        tiwaGif = new Image();
+        wizkidGif = new Image();
+        kraniumGif = new Image();
+        snohGif = new Image();
+
+        tiwaGif.src = "tiwa.gif";
+        wizkidGif.src = "wizkid.gif";
+        kraniumGif.src = "kranium.gif";
+        snohGif.src = "snoh.gif";
+    }
+
+
+
+
+    /* Pre-Load Images */
+
 
 
     var playerPage = document.getElementById("playerPage");
@@ -180,13 +199,13 @@ window.onload = () => {
         playButton.style.display = "none";
         pauseButton.style.display = "flex"; 
 
-        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('tiwa.gif') center";
+        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("+tiwaGif.src+") center";
 
         
 
         setTimeout(() => {
             playerBarContainer.style.display = "flex";
-            playerBarImage.src = "tiwa.gif";
+            playerBarImage.src = tiwaGif.src;
 
         }, 500);
 
@@ -308,7 +327,7 @@ window.onload = () => {
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
-        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('wizkid.gif') center";
+        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("+wizkidGif.src+") center";
 
         playerPage.style.transform = "translateY(0%)";
 
@@ -353,7 +372,7 @@ window.onload = () => {
 
             setTimeout(() => {
                 playerBarContainer.style.display = "flex";
-                playerBarImage.src = "wizkid.gif";
+                playerBarImage.src = wizkidGif.src;
     
             }, 500);
 
@@ -436,7 +455,7 @@ window.onload = () => {
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
-        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('kranium.gif') center";
+        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("+kraniumGif.src+") center";
 
 
         playerPage.style.transform = "translateY(0%)";
@@ -444,7 +463,7 @@ window.onload = () => {
         
         setTimeout(() => {
             playerBarContainer.style.display = "flex";
-            playerBarImage.src = "kranium.gif";
+            playerBarImage.src = kraniumGif.src;
 
         }, 500);
 
@@ -614,7 +633,7 @@ window.onload = () => {
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
-        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('snoh.gif') center";
+        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("+snohGif.src+") center";
 
        
 
@@ -625,7 +644,7 @@ window.onload = () => {
 
         setTimeout(() => {
             playerBarContainer.style.display = "flex";
-            playerBarImage.src = "snoh.gif";
+            playerBarImage.src = snohGif.src;
 
         }, 500);
 
