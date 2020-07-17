@@ -991,6 +991,144 @@ window.onload = () => {
 
 
 
+   /* START OF ANIMATICS */
+
+
+   const podcastCardTwo = document.getElementById("podcastCardTwo");
+
+   podcastCardTwo.onclick = () => {
+
+    podcastTwo();
+
+   }
+
+
+
+   const podcastTwo = () => {
+
+    stopAllAudio();
+
+    heart.style.display = "none";
+
+    const theAnimaticsPodcast = document.getElementById("theAnimaticsPodcast");
+
+    for(var i = 0; i < artistNamePlayer.length; i++) {
+        artistNamePlayer[i].innerHTML = "The Animatics Podcast";
+    }
+
+    for(var i = 0; i < songTitlePlayer.length; i++) {
+        songTitlePlayer[i].innerHTML = "Podcast Title Here";
+    }
+
+    albumCover.src="animatics.jpg";
+
+    if (podcastCardTwo.onclick) {
+    albumCover.style.display = "block";
+    }  
+
+
+
+    setTimeout(() => {
+        snoh_dying.play();
+    }, 300);
+
+    pauseButton.onclick = () => {
+        snoh_dying.pause();
+
+        pauseButton.style.display = "none";
+        playButton.style.display = "flex";
+
+    }
+
+    playButton.onclick = () => {
+        snoh_dying.play();
+
+        playButton.style.display = "none";
+        pauseButton.style.display = "flex";
+    }
+
+    
+
+    playButton.style.display = "none";
+    pauseButton.style.display = "flex";
+
+    playerPage.style.background = "#282828";
+
+   
+
+    playerPage.style.transform = "translateY(0%)";
+
+    
+
+
+    setTimeout(() => {
+        playerBarContainer.style.display = "flex";
+        playerBarImage.src = "animatics.jpg";
+
+    }, 500);
+
+
+    /* CHANGE SPEED */
+
+    speed.onclick = () => {
+
+        if (speed.innerHTML == "1x") {
+            speed.innerHTML = "1.2x";
+            snoh_dying.playbackRate = "1.2";
+        }
+
+        else if (speed.innerHTML == "1.2x") {
+            speed.innerHTML = "1.5x";
+            snoh_dying.playbackRate = "1.5";
+        }
+
+        else if (speed.innerHTML == "1.5x") {
+            speed.innerHTML = "2x";
+            snoh_dying.playbackRate = "2";
+        }
+
+        else if (speed.innerHTML == "2x") {
+            speed.innerHTML = "3x";
+            snoh_dying.playbackRate = "3;"
+        }
+
+        else if (speed.innerHTML == "3x") {
+            speed.innerHTML = "0.5x";
+            snoh_dying.playbackRate = "0.5";
+        }
+
+        else if (speed.innerHTML == "0.5x") {
+            speed.innerHTML = "0.8x";
+            snoh_dying.playbackRate = "0.8";
+        }
+
+        else if (speed.innerHTML == "0.8x") {
+            speed.innerHTML = "1x";
+            snoh_dying.playbackRate = "1";
+        }
+
+    }
+
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* END OF CHALE LETS GIST */
 
 
 
