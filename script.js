@@ -863,6 +863,8 @@ window.onload = () => {
    let albumCover = document.getElementById("albumCover");
 
 
+   /* CHALE LET'S GIST */ 
+
    const podcastCardOne = document.getElementById("podcastCardOne");
 
    podcastCardOne.onclick = () => {
@@ -932,7 +934,7 @@ window.onload = () => {
 
     setTimeout(() => {
         playerBarContainer.style.display = "flex";
-        playerBarImage.src = "chaleLetsgist.jfif";
+        playerBarImage.src = ("../chaleletsgist.jfif");
 
     }, 500);
 
@@ -984,14 +986,7 @@ window.onload = () => {
 
 
 
-
-
-
-
-
-
-    /* END OF PODCAST PLAYER */
-
+   /* END OF CHALE LETS GIST */
 
 
 
