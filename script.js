@@ -934,7 +934,7 @@ window.onload = () => {
 
     setTimeout(() => {
         playerBarContainer.style.display = "flex";
-        playerBarImage.src = ("../chaleletsgist.jfif");
+        playerBarImage.src = "chaleletsgist.jfif";
 
     }, 500);
 
