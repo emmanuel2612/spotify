@@ -1115,20 +1115,73 @@ window.onload = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     /* END OF CHALE LETS GIST */
+
+   
+
+
+
+    /* LISTENER PAGE */ 
+
+    const listenerPage = document.getElementById("listenerPage"); 
+
+
+    const listenerButton = document.getElementById("listenerButton");
+
+
+    listenerButton.onclick = () => {
+
+        showListener();
+    }
+
+    showListener = () =>{
+
+        listenerPage.style.transform = "translateY(0%)";
+
+    }
+
+    /* END OF LISTENER PAGE */
+
+
+     /* SWIPE DOWN GESTURES */
+
+
+    // Create an instance of Hammer with the reference.
+    var hideListener = new Hammer(listenerPage);
+
+    //enable all directions
+    hideListener.get('swipe').set({
+        direction: Hammer.DIRECTION_ALL,
+        threshold: 1,
+        velocity: 0.1
+    });
+
+    // Subscribe to a quick start event: press, tap, or doubletap.
+    // For a full list of quick start events, read the documentation.
+    hideListener.on('swipedown', function (e) {
+        e.target.classList.toggle('expand');
+
+        listenerPage.style.transform = "translateY(100%)";
+        console.log("test");
+
+
+    });
+
+    /* END OF SWIPE GESTURES */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1183,6 +1236,14 @@ window.onload = () => {
 
 
 }
+
+
+
+
+
+
+
+
 
 
 
