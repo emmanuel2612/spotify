@@ -158,6 +158,8 @@ window.onload = () => {
 
         stopAllAudio();
 
+        albumCover.style.display = "none";
+
         const tiwasavage_attention = document.getElementById("tiwasavage_attention");
 
 
@@ -290,6 +292,8 @@ window.onload = () => {
 
         stopAllAudio();
 
+        albumCover.style.display = "none";
+
         const wizkid_blow = document.getElementById("wizkid_blow");
 
         artistNamePlayer.innerHTML = "Wizkid";
@@ -421,6 +425,8 @@ window.onload = () => {
     const songThree = () => {
 
         stopAllAudio();
+
+        albumCover.style.display = "none";
 
         const kranium_galpolicy = document.getElementById("kranium_galpolicy");
 
@@ -603,6 +609,8 @@ window.onload = () => {
     const songFour = () => {
 
         stopAllAudio();
+
+        albumCover.style.display = "none";
 
         const snoh_dying = document.getElementById("snoh_dying");
 
@@ -802,7 +810,7 @@ window.onload = () => {
 
 
 
-    /* DRAG DOWN (PAN) GESTURES */
+   /* DRAG DOWN (PAN) GESTURES 
 
 
     // create a simple instance
@@ -838,8 +846,8 @@ window.onload = () => {
 
         }
 
-
-
+        this.renderer.setStyle(elem,"transform",`translate3d(0, 0, 0) translate(${xtranslate}px,${ytranslate}px)`);
+        
 
     
     
@@ -847,7 +855,164 @@ window.onload = () => {
 
         }); 
 
-    // END OF DRAG DOWN GESTURES 
+    END OF DRAG DOWN GESTURES */
+
+
+
+
+   let albumCover = document.getElementById("albumCover");
+
+
+   const podcastCardOne = document.getElementById("podcastCardOne");
+
+   podcastCardOne.onclick = () => {
+
+    podcastOne();
+
+   }
+
+
+
+   const podcastOne = () => {
+
+    stopAllAudio();
+
+    heart.style.display = "none";
+
+    const chaleLetsGist = document.getElementById("chaleLetsGist");
+
+    for(var i = 0; i < artistNamePlayer.length; i++) {
+        artistNamePlayer[i].innerHTML = "Chale Let's Gist";
+    }
+
+    for(var i = 0; i < songTitlePlayer.length; i++) {
+        songTitlePlayer[i].innerHTML = "Should your friends support you?";
+    }
+
+    albumCover.src="chaleletsgist.jfif";
+
+    if (podcastCardOne.onclick) {
+    albumCover.style.display = "block";
+    }  
+
+
+
+    setTimeout(() => {
+        snoh_dying.play();
+    }, 300);
+
+    pauseButton.onclick = () => {
+        snoh_dying.pause();
+
+        pauseButton.style.display = "none";
+        playButton.style.display = "flex";
+
+    }
+
+    playButton.onclick = () => {
+        snoh_dying.play();
+
+        playButton.style.display = "none";
+        pauseButton.style.display = "flex";
+    }
+
+    
+
+    playButton.style.display = "none";
+    pauseButton.style.display = "flex";
+
+    playerPage.style.background = "#282828";
+
+   
+
+    playerPage.style.transform = "translateY(0%)";
+
+    
+
+
+    setTimeout(() => {
+        playerBarContainer.style.display = "flex";
+        playerBarImage.src = "chaleLetsgist.jfif";
+
+    }, 500);
+
+
+    /* CHANGE SPEED */
+
+    speed.onclick = () => {
+
+        if (speed.innerHTML == "1x") {
+            speed.innerHTML = "1.2x";
+            snoh_dying.playbackRate = "1.2";
+        }
+
+        else if (speed.innerHTML == "1.2x") {
+            speed.innerHTML = "1.5x";
+            snoh_dying.playbackRate = "1.5";
+        }
+
+        else if (speed.innerHTML == "1.5x") {
+            speed.innerHTML = "2x";
+            snoh_dying.playbackRate = "2";
+        }
+
+        else if (speed.innerHTML == "2x") {
+            speed.innerHTML = "3x";
+            snoh_dying.playbackRate = "3;"
+        }
+
+        else if (speed.innerHTML == "3x") {
+            speed.innerHTML = "0.5x";
+            snoh_dying.playbackRate = "0.5";
+        }
+
+        else if (speed.innerHTML == "0.5x") {
+            speed.innerHTML = "0.8x";
+            snoh_dying.playbackRate = "0.8";
+        }
+
+        else if (speed.innerHTML == "0.8x") {
+            speed.innerHTML = "1x";
+            snoh_dying.playbackRate = "1";
+        }
+
+    }
+
+
+   }
+
+
+
+
+
+
+
+
+
+
+    /* END OF PODCAST PLAYER */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -885,7 +1050,6 @@ window.onload = () => {
 
 
 }
-
 
 
 
