@@ -1172,6 +1172,54 @@ window.onload = () => {
 
 
 
+    const djPage = document.getElementById("djPage");
+    const djButton = document.getElementById("djButton");
+
+
+    const messages = [
+        "Nah you're sickkkk",
+
+        "Styleyyyyyyyy",
+
+        "Big song",
+
+        "Okkk"
+
+    ]
+
+    
+
+    djButton.onclick = () =>{
+        djPage.style.display = "flex";
+        djPage.style.transform = "translate(0%)";
+
+        let chatMessage = document.getElementById("chatMessage");
+
+        var chatBox = document.getElementById("chatBox");
+
+        var i = 0;
+
+        while (i < 100) {
+
+        var cloneMessage = chatMessage.cloneNode(true);
+        chatBox.appendChild(cloneMessage);
+
+        i++
+        }
+
+        let randomMessage = messages[Math.floor(Math.random() * messages.length)];  
+
+        chatMessage.innerHTML = randomMessage;
+
+       
+        
+
+
+
+    }
+
+
+
 
 
 
