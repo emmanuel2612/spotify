@@ -18,17 +18,96 @@
 <body>
 
     <div id="djPage">
-<div id="soundCircle1"></div>
-<h1>Now Playing DJ Jerms</h1>
 
-<div id="chatBox">
+        <figure>
+            <img id="djCover" src="jerms.jpg" draggable="false">
+        </figure>
 
-    <div id="chatMessage">
-        <p></p>
+        <div id="liveContainer">
+
+            <div id="circleBottom">
+                <div id="circleTop"></div>
+            </div>
+            <h4>LIVE</h4>
+
+        </div>
+
+        <h1>DJ Jerms</h1>
+
+        <p>Queued tracks playlist <span id="span">3 tracks</span></p>
+
+        <div id="cueContainer">
+
+            <div class="cueBox">
+                <img class="cueBoxImg" src="aidonia.jpg">
+
+                <div>
+                    <h3>630</h3>
+                    <p>Aidonia </p>
+                </div>
+
+            </div>
+
+
+            <div class="cueBox">
+                <img class="cueBoxImg" src="charlyblack.jpg">
+
+                <div>
+                    <h3>Associate</h3>
+                    <p>Charly Black </p>
+                </div>
+
+            </div>
+
+
+            <div class="cueBox">
+                <img class="cueBoxImg" src="dejour.jpg">
+
+                <div>
+                    <h3>Sexy 19</h3>
+                    <p>Dejour Gardener </p>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+        <div id="userCueContainer">
+
+            <p>Your Queue</p>
+
+            <div class="cueBox">
+
+               <button>Request</button>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
     </div>
-    
 
-</div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    </div>
     </div>
 
     <!-- AUDIO FILES -->
@@ -49,6 +128,10 @@
 
     <audio id="snoh_dying">
         <source src="audio/snoh_dying.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="djJerms">
+        <source src ="audio/djjerms.mp3" type="audio/mpeg">
     </audio>
 
     <!-- END OF MUSIC -->
@@ -101,7 +184,7 @@
 
                 <div>
                     <i id="listenerButton" class="fas fa-globe-europe"></i>
-                <i id="heart" class="far fa-heart"></i>
+                    <i id="heart" class="far fa-heart"></i>
                 </div>
 
             </div>
@@ -167,8 +250,8 @@
     <section id="listenerPage">
 
         <div id="lpHeader">
-        <h1 class="heading"><span>3,407</span> people listening now</h1>
-    </div>
+            <h1 class="heading"><span>3,407</span> people listening now</h1>
+        </div>
 
         <div id="lpBody">
             <h2 class="heading">Top Countries</h2>
@@ -177,7 +260,7 @@
             <p>Australia</p>
             <p>USA</p>
             <p>Canada</p>
-            
+
         </div>
 
     </section>
@@ -186,7 +269,7 @@
     <!-- END OF LISTENERS PAGE -->
 
 
-    
+
 
 
 
@@ -205,7 +288,7 @@
 
         <h1 id="greeting">Good evening</h1>
 
-        <p id="djButton" style="font-size: 2em; color: white;">DJ</p>
+        
 
         <!-- BOX ONE -->
 
@@ -302,7 +385,7 @@
                             <div class="card" id="podcastCardOne">
                                 <div id="addContainer">
 
-                                   <h1>+</h1>
+                                    <h1>+</h1>
                                 </div>
 
                                 <div class="container">

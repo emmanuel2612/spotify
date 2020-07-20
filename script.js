@@ -37,7 +37,7 @@ window.onload = () => {
 
     /* Pre-Load Images */
 
-
+    var explorePage = document.getElementById("explorePage");
 
     var playerPage = document.getElementById("playerPage");
 
@@ -1173,7 +1173,13 @@ window.onload = () => {
 
 
     const djPage = document.getElementById("djPage");
-    const djButton = document.getElementById("djButton");
+    const djButton = document.getElementById("greeting");
+
+    const firstSong = document.getElementsByClassName("cueBox")[0];
+
+    const numOfTracks = document.getElementById("span");
+
+    const djJerms = document.getElementById("djJerms");
 
 
     const messages = [
@@ -1193,26 +1199,36 @@ window.onload = () => {
         djPage.style.display = "flex";
         djPage.style.transform = "translate(0%)";
 
-        let chatMessage = document.getElementById("chatMessage");
+        explorePage.style.display = "none";
 
-        var chatBox = document.getElementById("chatBox");
-
-        var i = 0;
-
-        while (i < 100) {
-
-        var cloneMessage = chatMessage.cloneNode(true);
-        chatBox.appendChild(cloneMessage);
-
-        i++
-        }
-
-        let randomMessage = messages[Math.floor(Math.random() * messages.length)];  
-
-        chatMessage.innerHTML = randomMessage;
-
-       
+        djJerms.play();
         
+
+        /*let randomMessage = messages[Math.floor(Math.random() * messages.length)];  */
+
+  
+
+        setTimeout(() => {
+            firstSong.style.opacity = "0";
+        }, 1500);
+
+
+        setTimeout(() => {
+            firstSong.style.transform = "translateX(100%)";
+        }, 1500);
+
+        setTimeout(() => {
+            firstSong.style.height = "0px";
+            firstSong.style.marginBottom = "0px";
+            numOfTracks.innerHTML = "2 tracks";
+
+        }, 2000);
+
+        setTimeout(() => {
+            firstSong.style.display = "none";
+        }, 4000);
+       
+       
 
 
 
