@@ -21,7 +21,7 @@ window.onload = () => {
     /* END OF MUSIC OBJECTS */
 
 
-    /* Pre-Load Images */ 
+    /* Pre-Load Images */
 
     if (document.images) {
         tiwaGif = new Image();
@@ -67,12 +67,12 @@ window.onload = () => {
     var added = document.getElementById("added");
 
 
-    heart.onclick = () =>{
+    heart.onclick = () => {
 
         added.style.transform = "scale(0,0)";
-      
 
-        if (!heart.classList.contains("clickHeart")){
+
+        if (!heart.classList.contains("clickHeart")) {
             heart.classList.add("clickHeart");
 
             removed.style.transform = "scale(0,0)";
@@ -96,7 +96,7 @@ window.onload = () => {
             console.log("I just selected the heart");
         }
 
-        else if (heart.classList.contains("clickHeart")){
+        else if (heart.classList.contains("clickHeart")) {
             heart.classList.remove("clickHeart");
             console.log("I just removed the heart");
 
@@ -122,7 +122,7 @@ window.onload = () => {
 
         }
 
-}
+    }
 
 
 
@@ -142,7 +142,7 @@ window.onload = () => {
 
     /* END OF STOP AUDIO */
 
-    playerBarContainer.onclick = () =>{
+    playerBarContainer.onclick = () => {
         playerPage.style.transform = "translate(0%)";
     }
 
@@ -185,22 +185,22 @@ window.onload = () => {
 
 
 
-            
-        for(var i = 0; i < artistNamePlayer.length; i++) {
+
+        for (var i = 0; i < artistNamePlayer.length; i++) {
             artistNamePlayer[i].innerHTML = "Tiwa Savage";
         }
 
-        for(var i = 0; i < songTitlePlayer.length; i++) {
+        for (var i = 0; i < songTitlePlayer.length; i++) {
             songTitlePlayer[i].innerHTML = "Attention";
         }
 
 
         playButton.style.display = "none";
-        pauseButton.style.display = "flex"; 
+        pauseButton.style.display = "flex";
 
-        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("+tiwaGif.src+") center";
+        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(" + tiwaGif.src + ") center";
 
-        
+
 
         setTimeout(() => {
             playerBarContainer.style.display = "flex";
@@ -208,12 +208,12 @@ window.onload = () => {
 
         }, 500);
 
-       
+
 
         playerPage.style.transform = "translateY(0%)";
 
 
-      
+
 
 
 
@@ -258,15 +258,15 @@ window.onload = () => {
 
         }
 
-         /* NEXT TRACK */
+        /* NEXT TRACK */
 
-         forwardButton.onclick = () => {
+        forwardButton.onclick = () => {
             tiwasavage_attention.pause();
-            tiwasavage_attention.currentTime = 0; 
+            tiwasavage_attention.currentTime = 0;
             songTwo();
 
             heart.classList.remove("clickHeart");
-    }
+        }
 
 
     }
@@ -277,8 +277,37 @@ window.onload = () => {
         songOne();
 
 
+        listenerButton.onclick = () => {
+
+            showListener();
+
+            countryName[0].innerHTML = "Nigeria";
+            countryName[1].innerHTML = "United Kingdom";
+            countryName[2].innerHTML = "Ghana";
+            countryName[3].innerHTML = "South Africa";
+
+            lpHeader.style.backgroundColor = "#365b6d";
+            listenerNumber.style.color = "#ecc895";
+            lpHeader.style.color = "#ecc895";
+
+            randomNumberFunction();
+
+            countryFlyIn();
+
+        }
+
+
+
+
+
 
     }
+
+
+   
+
+
+
 
     /* END OF TIWA SAVAGE*/
 
@@ -319,18 +348,18 @@ window.onload = () => {
         }
 
 
-        for(var i = 0; i < artistNamePlayer.length; i++) {
+        for (var i = 0; i < artistNamePlayer.length; i++) {
             artistNamePlayer[i].innerHTML = "Wizkid";
         }
 
-        for(var i = 0; i < songTitlePlayer.length; i++) {
+        for (var i = 0; i < songTitlePlayer.length; i++) {
             songTitlePlayer[i].innerHTML = "Blow";
         }
 
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
-        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("+wizkidGif.src+") center";
+        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(" + wizkidGif.src + ") center";
 
         playerPage.style.transform = "translateY(0%)";
 
@@ -373,33 +402,33 @@ window.onload = () => {
 
         }
 
-            setTimeout(() => {
-                playerBarContainer.style.display = "flex";
-                playerBarImage.src = wizkidGif.src;
-    
-            }, 500);
+        setTimeout(() => {
+            playerBarContainer.style.display = "flex";
+            playerBarImage.src = wizkidGif.src;
+
+        }, 500);
 
 
-             /* NEXT TRACK */
+        /* NEXT TRACK */
 
         forwardButton.onclick = () => {
             wizkid_blow.pause();
-            wizkid_blow.currentTime = 0; 
+            wizkid_blow.currentTime = 0;
             songThree();
 
             heart.classList.remove("clickHeart");
-    }
+        }
 
-     /* LAST TRACK */
+        /* LAST TRACK */
 
         backButton.onclick = () => {
-        wizkid_blow.pause();
-        wizkid_blow.currentTime = 0; 
-        songOne();
+            wizkid_blow.pause();
+            wizkid_blow.currentTime = 0;
+            songOne();
 
-        heart.classList.remove("clickHeart");
-}
-            
+            heart.classList.remove("clickHeart");
+        }
+
 
 
 
@@ -409,10 +438,31 @@ window.onload = () => {
 
         songTwo();
 
-    
         
+        listenerButton.onclick = () => {
 
-        } 
+            showListener();
+
+            countryName[0].innerHTML = "Nigeria";
+            countryName[1].innerHTML = "United Kingdom";
+            countryName[2].innerHTML = "Ghana";
+            countryName[3].innerHTML = "Zimbabwe";
+
+            lpHeader.style.backgroundColor = "#ff4632";
+            listenerNumber.style.color = "#ecc895";
+            lpHeader.style.color = "#ecc895";
+
+            randomNumberFunction();
+
+            countryFlyIn();
+
+
+        }
+
+
+
+
+    }
 
     /*END OF WIZKID*/
 
@@ -452,24 +502,24 @@ window.onload = () => {
             pauseButton.style.display = "flex";
         }
 
-        
-        for(var i = 0; i < artistNamePlayer.length; i++) {
+
+        for (var i = 0; i < artistNamePlayer.length; i++) {
             artistNamePlayer[i].innerHTML = "Kranium";
         }
 
-        for(var i = 0; i < songTitlePlayer.length; i++) {
+        for (var i = 0; i < songTitlePlayer.length; i++) {
             songTitlePlayer[i].innerHTML = "Gal Policy";
         }
 
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
-        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("+kraniumGif.src+") center";
+        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(" + kraniumGif.src + ") center";
 
 
         playerPage.style.transform = "translateY(0%)";
 
-        
+
         setTimeout(() => {
             playerBarContainer.style.display = "flex";
             playerBarImage.src = kraniumGif.src;
@@ -520,23 +570,23 @@ window.onload = () => {
 
         }
 
-         /* NEXT TRACK */
+        /* NEXT TRACK */
 
-         forwardButton.onclick = () => {
+        forwardButton.onclick = () => {
             kranium_galpolicy.pause();
-            kranium_galpolicy.currentTime = 0; 
+            kranium_galpolicy.currentTime = 0;
             songFour();
 
             heart.classList.remove("clickHeart");
-    }
+        }
 
-    backButton.onclick = () => {
-        kranium_galpolicy.pause();
-        kranium_galpolicy.currentTime = 0; 
-        songTwo();
+        backButton.onclick = () => {
+            kranium_galpolicy.pause();
+            kranium_galpolicy.currentTime = 0;
+            songTwo();
 
-        heart.classList.remove("clickHeart");
-    }
+            heart.classList.remove("clickHeart");
+        }
 
 
 
@@ -550,8 +600,25 @@ window.onload = () => {
 
 
 
-        /* NEXT TRACK */
+        listenerButton.onclick = () => {
 
+            showListener();
+
+            countryName[0].innerHTML = "Jamaica";
+            countryName[1].innerHTML = "United Kingdom";
+            countryName[2].innerHTML = "Canada";
+            countryName[3].innerHTML = "France";
+
+            lpHeader.style.backgroundColor = "#90bbcb";
+            listenerNumber.style.color = "#000101";
+            lpHeader.style.color = "#000101";
+
+            randomNumberFunction();
+
+            countryFlyIn();
+
+
+        }
 
 
 
@@ -636,25 +703,25 @@ window.onload = () => {
             pauseButton.style.display = "flex";
         }
 
-        
-        for(var i = 0; i < artistNamePlayer.length; i++) {
+
+        for (var i = 0; i < artistNamePlayer.length; i++) {
             artistNamePlayer[i].innerHTML = "Snoh Aalegera";
         }
 
-        for(var i = 0; i < songTitlePlayer.length; i++) {
+        for (var i = 0; i < songTitlePlayer.length; i++) {
             songTitlePlayer[i].innerHTML = "Dying 4 Your Love";
         }
 
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
-        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("+snohGif.src+") center";
+        playerPage.style.background = "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(" + snohGif.src + ") center";
 
-       
+
 
         playerPage.style.transform = "translateY(0%)";
 
-        
+
 
 
         setTimeout(() => {
@@ -705,23 +772,23 @@ window.onload = () => {
 
         }
 
-         /* NEXT TRACK */
+        /* NEXT TRACK */
 
-         forwardButton.onclick = () => {
+        forwardButton.onclick = () => {
             snoh_dying.pause();
-            snoh_dying.currentTime = 0; 
+            snoh_dying.currentTime = 0;
             songOne();
 
             heart.classList.remove("clickHeart");
-    }
+        }
 
-    backButton.onclick = () => {
-        snoh_dying.pause();
-        snoh_dying.currentTime = 0; 
-        songThree();
+        backButton.onclick = () => {
+            snoh_dying.pause();
+            snoh_dying.currentTime = 0;
+            songThree();
 
-        heart.classList.remove("clickHeart");
-    }
+            heart.classList.remove("clickHeart");
+        }
 
 
 
@@ -732,7 +799,26 @@ window.onload = () => {
 
         songFour();
 
-        /* NEXT TRACK */
+        
+        listenerButton.onclick = () => {
+
+            showListener();
+
+            countryName[0].innerHTML = "USA";
+            countryName[1].innerHTML = "United Kingdom";
+            countryName[2].innerHTML = "Belgium";
+            countryName[3].innerHTML = "Sweden";
+
+            lpHeader.style.backgroundColor = "#ff4632";
+            listenerNumber.style.color = "#ecc895";
+            lpHeader.style.color = "#ecc895";
+
+            randomNumberFunction();
+
+            countryFlyIn();
+
+
+        }
 
 
     }
@@ -772,7 +858,7 @@ window.onload = () => {
 
     });
 
-    /* END OF SWIPE GESTURES */ 
+    /* END OF SWIPE GESTURES */
 
 
 
@@ -810,323 +896,355 @@ window.onload = () => {
 
 
 
-   /* DRAG DOWN (PAN) GESTURES 
+    /* DRAG DOWN (PAN) GESTURES 
+ 
+ 
+     // create a simple instance
+     // by default, it only adds horizontal recognizers
+     var dragPlayer = new Hammer(playerPage);
+ 
+     // let the pan gesture support all directions.
+     // this will block the vertical scrolling on a touch-device while on the element
+     dragPlayer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+ 
+     // listen to events...
+     dragPlayer.on("pandown", function (ev) {
+         console.log("drag");
+ 
+         let mousePosition = event.clientY; // Get Position of mouse
+ 
+         let playerPagePosition = playerPage.offsetTop;
+ 
+ 
+         playerPage.style.transform = "translateY(" + mousePosition + "px)"; //Player is positioned wherever mouse is
+ 
+         playerPage.onmouseup = () => {
+ 
+             if (playerPagePosition <= 50) {
+                 
+                 playerPage.style.transform = "translate(0%)";
+ 
+             }
+ 
+             else {
+                 playerPage.style.transform = "translate(100%)";
+             }
+ 
+         }
+ 
+         this.renderer.setStyle(elem,"transform",`translate3d(0, 0, 0) translate(${xtranslate}px,${ytranslate}px)`);
+         
+ 
+     
+     
+ 
+ 
+         }); 
+ 
+     END OF DRAG DOWN GESTURES */
 
 
-    // create a simple instance
-    // by default, it only adds horizontal recognizers
-    var dragPlayer = new Hammer(playerPage);
-
-    // let the pan gesture support all directions.
-    // this will block the vertical scrolling on a touch-device while on the element
-    dragPlayer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-
-    // listen to events...
-    dragPlayer.on("pandown", function (ev) {
-        console.log("drag");
-
-        let mousePosition = event.clientY; // Get Position of mouse
-
-        let playerPagePosition = playerPage.offsetTop;
 
 
-        playerPage.style.transform = "translateY(" + mousePosition + "px)"; //Player is positioned wherever mouse is
+    let albumCover = document.getElementById("albumCover");
 
-        playerPage.onmouseup = () => {
 
-            if (playerPagePosition <= 50) {
-                
-                playerPage.style.transform = "translate(0%)";
+    /* CHALE LET'S GIST */
 
-            }
+    const podcastCardOne = document.getElementById("podcastCardOne");
 
-            else {
-                playerPage.style.transform = "translate(100%)";
-            }
+    podcastCardOne.onclick = () => {
+
+        podcastOne();
+
+    }
+
+
+
+    const podcastOne = () => {
+
+        stopAllAudio();
+
+        heart.style.display = "none";
+
+        const chaleLetsGist = document.getElementById("chaleLetsGist");
+
+        for (var i = 0; i < artistNamePlayer.length; i++) {
+            artistNamePlayer[i].innerHTML = "Chale Let's Gist";
+        }
+
+        for (var i = 0; i < songTitlePlayer.length; i++) {
+            songTitlePlayer[i].innerHTML = "Should your friends support you?";
+        }
+
+        albumCover.src = "chaleletsgist.jfif";
+
+        if (podcastCardOne.onclick) {
+            albumCover.style.display = "block";
+        }
+
+
+
+        setTimeout(() => {
+            snoh_dying.play();
+        }, 300);
+
+        pauseButton.onclick = () => {
+            snoh_dying.pause();
+
+            pauseButton.style.display = "none";
+            playButton.style.display = "flex";
 
         }
 
-        this.renderer.setStyle(elem,"transform",`translate3d(0, 0, 0) translate(${xtranslate}px,${ytranslate}px)`);
-        
+        playButton.onclick = () => {
+            snoh_dying.play();
 
-    
-    
-
-
-        }); 
-
-    END OF DRAG DOWN GESTURES */
+            playButton.style.display = "none";
+            pauseButton.style.display = "flex";
+        }
 
 
-
-
-   let albumCover = document.getElementById("albumCover");
-
-
-   /* CHALE LET'S GIST */ 
-
-   const podcastCardOne = document.getElementById("podcastCardOne");
-
-   podcastCardOne.onclick = () => {
-
-    podcastOne();
-
-   }
-
-
-
-   const podcastOne = () => {
-
-    stopAllAudio();
-
-    heart.style.display = "none";
-
-    const chaleLetsGist = document.getElementById("chaleLetsGist");
-
-    for(var i = 0; i < artistNamePlayer.length; i++) {
-        artistNamePlayer[i].innerHTML = "Chale Let's Gist";
-    }
-
-    for(var i = 0; i < songTitlePlayer.length; i++) {
-        songTitlePlayer[i].innerHTML = "Should your friends support you?";
-    }
-
-    albumCover.src="chaleletsgist.jfif";
-
-    if (podcastCardOne.onclick) {
-    albumCover.style.display = "block";
-    }  
-
-
-
-    setTimeout(() => {
-        snoh_dying.play();
-    }, 300);
-
-    pauseButton.onclick = () => {
-        snoh_dying.pause();
-
-        pauseButton.style.display = "none";
-        playButton.style.display = "flex";
-
-    }
-
-    playButton.onclick = () => {
-        snoh_dying.play();
 
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
-    }
 
-    
-
-    playButton.style.display = "none";
-    pauseButton.style.display = "flex";
-
-    playerPage.style.background = "#282828";
-
-   
-
-    playerPage.style.transform = "translateY(0%)";
-
-    
+        playerPage.style.background = "#282828";
 
 
-    setTimeout(() => {
-        playerBarContainer.style.display = "flex";
-        playerBarImage.src = "chaleletsgist.jfif";
 
-    }, 500);
+        playerPage.style.transform = "translateY(0%)";
 
 
-    /* CHANGE SPEED */
 
-    speed.onclick = () => {
 
-        if (speed.innerHTML == "1x") {
-            speed.innerHTML = "1.2x";
-            snoh_dying.playbackRate = "1.2";
+        setTimeout(() => {
+            playerBarContainer.style.display = "flex";
+            playerBarImage.src = "chaleletsgist.jfif";
+
+        }, 500);
+
+
+        /* CHANGE SPEED */
+
+        speed.onclick = () => {
+
+            if (speed.innerHTML == "1x") {
+                speed.innerHTML = "1.2x";
+                snoh_dying.playbackRate = "1.2";
+            }
+
+            else if (speed.innerHTML == "1.2x") {
+                speed.innerHTML = "1.5x";
+                snoh_dying.playbackRate = "1.5";
+            }
+
+            else if (speed.innerHTML == "1.5x") {
+                speed.innerHTML = "2x";
+                snoh_dying.playbackRate = "2";
+            }
+
+            else if (speed.innerHTML == "2x") {
+                speed.innerHTML = "3x";
+                snoh_dying.playbackRate = "3;"
+            }
+
+            else if (speed.innerHTML == "3x") {
+                speed.innerHTML = "0.5x";
+                snoh_dying.playbackRate = "0.5";
+            }
+
+            else if (speed.innerHTML == "0.5x") {
+                speed.innerHTML = "0.8x";
+                snoh_dying.playbackRate = "0.8";
+            }
+
+            else if (speed.innerHTML == "0.8x") {
+                speed.innerHTML = "1x";
+                snoh_dying.playbackRate = "1";
+            }
+
         }
 
-        else if (speed.innerHTML == "1.2x") {
-            speed.innerHTML = "1.5x";
-            snoh_dying.playbackRate = "1.5";
-        }
-
-        else if (speed.innerHTML == "1.5x") {
-            speed.innerHTML = "2x";
-            snoh_dying.playbackRate = "2";
-        }
-
-        else if (speed.innerHTML == "2x") {
-            speed.innerHTML = "3x";
-            snoh_dying.playbackRate = "3;"
-        }
-
-        else if (speed.innerHTML == "3x") {
-            speed.innerHTML = "0.5x";
-            snoh_dying.playbackRate = "0.5";
-        }
-
-        else if (speed.innerHTML == "0.5x") {
-            speed.innerHTML = "0.8x";
-            snoh_dying.playbackRate = "0.8";
-        }
-
-        else if (speed.innerHTML == "0.8x") {
-            speed.innerHTML = "1x";
-            snoh_dying.playbackRate = "1";
-        }
 
     }
-
-
-   }
-
-
-
-
-   /* END OF CHALE LETS GIST */
-
-
-
-
-   /* START OF ANIMATICS */
-
-
-   const podcastCardTwo = document.getElementById("podcastCardTwo");
-
-   podcastCardTwo.onclick = () => {
-
-    podcastTwo();
-
-   }
-
-
-
-   const podcastTwo = () => {
-
-    stopAllAudio();
-
-    heart.style.display = "none";
-
-    const theAnimaticsPodcast = document.getElementById("theAnimaticsPodcast");
-
-    for(var i = 0; i < artistNamePlayer.length; i++) {
-        artistNamePlayer[i].innerHTML = "The Animatics Podcast";
-    }
-
-    for(var i = 0; i < songTitlePlayer.length; i++) {
-        songTitlePlayer[i].innerHTML = "Podcast Title Here";
-    }
-
-    albumCover.src="animatics.jpg";
-
-    if (podcastCardTwo.onclick) {
-    albumCover.style.display = "block";
-    }  
-
-
-
-    setTimeout(() => {
-        snoh_dying.play();
-    }, 300);
-
-    pauseButton.onclick = () => {
-        snoh_dying.pause();
-
-        pauseButton.style.display = "none";
-        playButton.style.display = "flex";
-
-    }
-
-    playButton.onclick = () => {
-        snoh_dying.play();
-
-        playButton.style.display = "none";
-        pauseButton.style.display = "flex";
-    }
-
-    
-
-    playButton.style.display = "none";
-    pauseButton.style.display = "flex";
-
-    playerPage.style.background = "#282828";
-
-   
-
-    playerPage.style.transform = "translateY(0%)";
-
-    
-
-
-    setTimeout(() => {
-        playerBarContainer.style.display = "flex";
-        playerBarImage.src = "animatics.jpg";
-
-    }, 500);
-
-
-    /* CHANGE SPEED */
-
-    speed.onclick = () => {
-
-        if (speed.innerHTML == "1x") {
-            speed.innerHTML = "1.2x";
-            snoh_dying.playbackRate = "1.2";
-        }
-
-        else if (speed.innerHTML == "1.2x") {
-            speed.innerHTML = "1.5x";
-            snoh_dying.playbackRate = "1.5";
-        }
-
-        else if (speed.innerHTML == "1.5x") {
-            speed.innerHTML = "2x";
-            snoh_dying.playbackRate = "2";
-        }
-
-        else if (speed.innerHTML == "2x") {
-            speed.innerHTML = "3x";
-            snoh_dying.playbackRate = "3;"
-        }
-
-        else if (speed.innerHTML == "3x") {
-            speed.innerHTML = "0.5x";
-            snoh_dying.playbackRate = "0.5";
-        }
-
-        else if (speed.innerHTML == "0.5x") {
-            speed.innerHTML = "0.8x";
-            snoh_dying.playbackRate = "0.8";
-        }
-
-        else if (speed.innerHTML == "0.8x") {
-            speed.innerHTML = "1x";
-            snoh_dying.playbackRate = "1";
-        }
-
-    }
-
-
-   }
 
 
 
 
     /* END OF CHALE LETS GIST */
 
-   
 
 
 
-    /* LISTENER PAGE */ 
+    /* START OF ANIMATICS */
 
-    const listenerPage = document.getElementById("listenerPage"); 
+
+    const podcastCardTwo = document.getElementById("podcastCardTwo");
+
+    podcastCardTwo.onclick = () => {
+
+        podcastTwo();
+
+    }
+
+
+
+    const podcastTwo = () => {
+
+        stopAllAudio();
+
+        heart.style.display = "none";
+
+        const theAnimaticsPodcast = document.getElementById("theAnimaticsPodcast");
+
+        for (var i = 0; i < artistNamePlayer.length; i++) {
+            artistNamePlayer[i].innerHTML = "The Animatics Podcast";
+        }
+
+        for (var i = 0; i < songTitlePlayer.length; i++) {
+            songTitlePlayer[i].innerHTML = "Podcast Title Here";
+        }
+
+        albumCover.src = "animatics.jpg";
+
+        if (podcastCardTwo.onclick) {
+            albumCover.style.display = "block";
+        }
+
+
+
+        setTimeout(() => {
+            snoh_dying.play();
+        }, 300);
+
+        pauseButton.onclick = () => {
+            snoh_dying.pause();
+
+            pauseButton.style.display = "none";
+            playButton.style.display = "flex";
+
+        }
+
+        playButton.onclick = () => {
+            snoh_dying.play();
+
+            playButton.style.display = "none";
+            pauseButton.style.display = "flex";
+        }
+
+
+
+        playButton.style.display = "none";
+        pauseButton.style.display = "flex";
+
+        playerPage.style.background = "#282828";
+
+
+
+        playerPage.style.transform = "translateY(0%)";
+
+
+
+
+        setTimeout(() => {
+            playerBarContainer.style.display = "flex";
+            playerBarImage.src = "animatics.jpg";
+
+        }, 500);
+
+
+        /* CHANGE SPEED */
+
+        speed.onclick = () => {
+
+            if (speed.innerHTML == "1x") {
+                speed.innerHTML = "1.2x";
+                snoh_dying.playbackRate = "1.2";
+            }
+
+            else if (speed.innerHTML == "1.2x") {
+                speed.innerHTML = "1.5x";
+                snoh_dying.playbackRate = "1.5";
+            }
+
+            else if (speed.innerHTML == "1.5x") {
+                speed.innerHTML = "2x";
+                snoh_dying.playbackRate = "2";
+            }
+
+            else if (speed.innerHTML == "2x") {
+                speed.innerHTML = "3x";
+                snoh_dying.playbackRate = "3;"
+            }
+
+            else if (speed.innerHTML == "3x") {
+                speed.innerHTML = "0.5x";
+                snoh_dying.playbackRate = "0.5";
+            }
+
+            else if (speed.innerHTML == "0.5x") {
+                speed.innerHTML = "0.8x";
+                snoh_dying.playbackRate = "0.8";
+            }
+
+            else if (speed.innerHTML == "0.8x") {
+                speed.innerHTML = "1x";
+                snoh_dying.playbackRate = "1";
+            }
+
+        }
+
+
+    }
+
+
+
+
+    /* END OF CHALE LETS GIST */
+
+
+
+
+
+    /* LISTENER PAGE */
+
+    const listenerPage = document.getElementById("listenerPage");
 
 
     const listenerButton = document.getElementById("listenerButton");
+
+    let listenerNumber = document.getElementById("listenerNumber");
+
+    let countryName = document.getElementsByClassName("countryName");
+
+    let lpHeader = document.getElementById("lpHeader");
+
+
+    /* Country Transition */
+
+    const countryFlyIn = () => {
+
+    setTimeout(() => {
+        countryName[0].style.transform = "translateX(0%)";
+    }, 0);
+
+    setTimeout(() => {
+        countryName[1].style.transform = "translateX(0%)";
+    }, 200);
+
+    setTimeout(() => {
+        countryName[2].style.transform = "translateX(0%)";
+    }, 400);
+
+    setTimeout(() => {
+        countryName[3].style.transform = "translateX(0%)";
+    }, 600);
+
+    }
+
+    /* End of Country Transition */ 
+
 
 
     listenerButton.onclick = () => {
@@ -1134,16 +1252,27 @@ window.onload = () => {
         showListener();
     }
 
-    showListener = () =>{
+    showListener = () => {
 
         listenerPage.style.transform = "translateY(0%)";
 
     }
 
+
+    randomNumberFunction = () =>{
+    var randomNumOne = Math.floor((Math.random() * 20) + 10);
+    var randomNumTwo = Math.floor((Math.random() * 200) + 100);
+
+    listenerNumber.innerHTML = `${randomNumOne},${randomNumTwo} others are listening `;
+    }
+
+
+
+
     /* END OF LISTENER PAGE */
 
 
-     /* SWIPE DOWN GESTURES */
+    /* SWIPE DOWN GESTURES */
 
 
     // Create an instance of Hammer with the reference.
@@ -1165,9 +1294,14 @@ window.onload = () => {
         console.log("test");
 
 
+    for (var i= 0; i < countryName.length; i++){
+            countryName[i].style.transform = "translateX(-100%)";
+    }
+
+
     });
 
-    /* END OF SWIPE GESTURES */ 
+    /* END OF SWIPE GESTURES */
 
 
 
@@ -1175,7 +1309,7 @@ window.onload = () => {
     const djPage = document.getElementById("djPage");
     const djButton = document.getElementById("greeting");
 
-    const firstSong = document.getElementsByClassName("cueBox")[0];
+    const firstSong = document.getElementsByClassName("cueBox");
 
     const numOfTracks = document.getElementById("span");
 
@@ -1193,45 +1327,115 @@ window.onload = () => {
 
     ]
 
-    
 
-    djButton.onclick = () =>{
+
+    djButton.onclick = () => {
         djPage.style.display = "flex";
         djPage.style.transform = "translate(0%)";
 
         explorePage.style.display = "none";
+        playerBarContainer.style.display = "none";
+        stopAllAudio();
 
+        djJerms.currentTime = 329;
         djJerms.play();
-        
+
 
         /*let randomMessage = messages[Math.floor(Math.random() * messages.length)];  */
 
-  
+
+        /* TRACK ONE HIDE */
 
         setTimeout(() => {
-            firstSong.style.opacity = "0";
-        }, 1500);
+            firstSong[0].style.opacity = "0";
+        }, 2000);
 
 
         setTimeout(() => {
-            firstSong.style.transform = "translateX(100%)";
-        }, 1500);
-
-        setTimeout(() => {
-            firstSong.style.height = "0px";
-            firstSong.style.marginBottom = "0px";
-            numOfTracks.innerHTML = "2 tracks";
-
+            firstSong[0].style.transform = "translateX(100%)";
         }, 2000);
 
         setTimeout(() => {
-            firstSong.style.display = "none";
+            firstSong[0].style.height = "0px";
+            firstSong[0].style.marginBottom = "0px";
+            numOfTracks.innerHTML = "2 tracks";
+
+        }, 2500);
+
+        setTimeout(() => {
+            firstSong[0].style.display = "none";
         }, 4000);
-       
-       
+
+        /* END OF TRACK ONE HIDE */
+
+
+        /* TRACK TWO HIDE */
 
 
 
+        
+        djJerms.ontimeupdate = () => {
+
+            console.log(djJerms.currentTime);
+
+            if (djJerms.currentTime >= 365) { //365
+
+                setTimeout(() => {
+                    firstSong[1].style.opacity = "0";
+                }, 2000);
+
+
+                setTimeout(() => {
+                    firstSong[1].style.transform = "translateX(100%)";
+                }, 2000);
+
+                setTimeout(() => {
+                    firstSong[1].style.height = "0px";
+                    firstSong[1].style.marginBottom = "0px";
+                    numOfTracks.innerHTML = "1 track";
+
+                }, 2500);
+
+                setTimeout(() => {
+                    firstSong[1].style.display = "none";
+                }, 4000);
+
+                /* END OF TRACK TWO HIDE */
+
+            }
+
+             if (djJerms.currentTime > 403) { //403
+
+                    setTimeout(() => {
+                        firstSong[2].style.opacity = "0";
+                    }, 2000);
+    
+    
+                    setTimeout(() => {
+                        firstSong[2].style.transform = "translateX(100%)";
+                    }, 2000);
+    
+                    setTimeout(() => {
+                        firstSong[2].style.height = "0px";
+                        firstSong[2].style.marginBottom = "0px";
+                        numOfTracks.innerHTML = "2 tracks";
+    
+                    }, 2500);
+    
+                    setTimeout(() => {
+                        firstSong[2].style.display = "none";
+                    }, 4000);
+    
+                    /* END OF TRACK TWO HIDE */
+    
+                }
+            
+
+
+
+        }
+
+        
     }
 
 
@@ -1299,7 +1503,32 @@ window.onload = () => {
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 
