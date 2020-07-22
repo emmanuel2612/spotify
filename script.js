@@ -1315,7 +1315,6 @@ window.onload = () => {
 
     const djJerms = document.getElementById("djJerms");
 
-    djJerms.preload = "auto";
 
 
     const messages = [
