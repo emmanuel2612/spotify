@@ -1316,7 +1316,6 @@ window.onload = () => {
     const djJerms = document.getElementById("djJerms");
 
 
-
     const messages = [
         "Nah you're sickkkk",
 
@@ -1338,11 +1337,13 @@ window.onload = () => {
         playerBarContainer.style.display = "none";
         stopAllAudio();
 
-    
+        
+
         djJerms.currentTime = 329;
 
-        djJerms.play();
 
+        djJerms.play();
+        
 
 
         /*let randomMessage = messages[Math.floor(Math.random() * messages.length)];  */
