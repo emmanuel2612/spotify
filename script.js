@@ -1327,26 +1327,37 @@ window.onload = () => {
 
     ]
 
+    var djPopup = document.getElementById("djPopup");
+    var djPopupButton = document.getElementById("djPopupButton");
+
+
 
 
     djButton.onclick = () => {
-        djPage.style.display = "flex";
-        djPage.style.transform = "translate(0%)";
+
+        djPopup.style.display = "flex";
 
         explorePage.style.display = "none";
         playerBarContainer.style.display = "none";
         stopAllAudio();
 
         
+    }
+
+
+
+
+    djPopupButton.onclick = () =>{
+        
+        djPage.style.display = "flex";
+        djPage.style.transform = "translate(0%)";
+        
 
         djJerms.currentTime = 329;
 
 
-        djJerms.play();
-        
-
-
-        /*let randomMessage = messages[Math.floor(Math.random() * messages.length)];  */
+        djJerms.play(); 
+         
 
 
         /* TRACK ONE HIDE */
@@ -1439,10 +1450,7 @@ window.onload = () => {
 
 
         }
-
-        
     }
-
 
 
 
