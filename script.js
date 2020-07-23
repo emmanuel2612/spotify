@@ -1358,7 +1358,7 @@ window.onload = () => {
 
         stopAllAudio();
 
-        if (djPopup.style.display = "flex"){
+        if (djPopup.style.transform = "translateY(0%)"){
 
             document.body.style.overflow = "hidden";
         }
