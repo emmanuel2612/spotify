@@ -1316,16 +1316,6 @@ window.onload = () => {
     const djJerms = document.getElementById("djJerms");
 
 
-    const messages = [
-        "Nah you're sickkkk",
-
-        "Styleyyyyyyyy",
-
-        "Big song",
-
-        "Okkk"
-
-    ]
 
     var djPopup = document.getElementById("djPopup");
     var djPopupButton = document.getElementById("djPopupButton");
@@ -1345,18 +1335,21 @@ window.onload = () => {
     }
 
 
+    
+
 
 
     djPopupButton.onclick = () =>{
         
         djPage.style.display = "flex";
         djPage.style.transform = "translate(0%)";
-        
 
-        djJerms.currentTime = 329;
+     
 
+        djJerms.play();
 
-        djJerms.play(); 
+        console.log(djJerms.currentTime);
+
          
 
 
@@ -1394,7 +1387,7 @@ window.onload = () => {
 
             console.log(djJerms.currentTime);
 
-            if (djJerms.currentTime >= 365) { //365
+            if (djJerms.currentTime > 34.5) { //365
 
                 setTimeout(() => {
                     firstSong[1].style.opacity = "0";
@@ -1420,7 +1413,7 @@ window.onload = () => {
 
             }
 
-             if (djJerms.currentTime > 403) { //403
+             if (djJerms.currentTime > 72.5) { 
 
                     setTimeout(() => {
                         firstSong[2].style.opacity = "0";
