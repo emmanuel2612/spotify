@@ -62,9 +62,22 @@ window.onload = () => {
     var playerBarContainer = document.getElementById("playerBarContainer");
     var playerBarImage = document.getElementById("playerBarImage");
 
+    var playerArrow = document.getElementById("playerArrow");
+
     var heart = document.getElementById("heart");
 
     var added = document.getElementById("added");
+
+    var dismiss = document.getElementById("dismiss");
+
+    playerArrow.onclick = () => {
+        playerPage.style.transform = "translateY(100%)";
+        console.log("hello");
+    }
+
+    dismiss.onclick = () =>{
+        djPopup.style.transform = "translateY(150%)";
+    }
 
 
     heart.onclick = () => {
@@ -238,7 +251,7 @@ window.onload = () => {
 
             else if (speed.innerHTML == "2x") {
                 speed.innerHTML = "3x";
-                tiwasavage_attention.playbackRate = "3;"
+                tiwasavage_attention.playbackRate = "3"
             }
 
             else if (speed.innerHTML == "3x") {
@@ -296,6 +309,7 @@ window.onload = () => {
 
         }
 
+        playerArrow.style.paddingTop = "50px";
 
 
 
@@ -459,7 +473,7 @@ window.onload = () => {
 
         }
 
-
+        playerArrow.style.paddingTop = "25px";
 
 
     }
@@ -620,6 +634,7 @@ window.onload = () => {
 
         }
 
+        playerArrow.style.paddingTop = "25px";
 
 
     }
@@ -820,6 +835,8 @@ window.onload = () => {
 
         }
 
+        playerArrow.style.paddingTop = "25px";
+
 
     }
 
@@ -974,13 +991,14 @@ window.onload = () => {
         }
 
         for (var i = 0; i < songTitlePlayer.length; i++) {
-            songTitlePlayer[i].innerHTML = "Should your friends support you?";
+            songTitlePlayer[i].innerHTML = "Should your friends support";
         }
 
         albumCover.src = "chaleletsgist.jfif";
 
         if (podcastCardOne.onclick) {
             albumCover.style.display = "block";
+            playerArrow.style.paddingTop = "25px";
         }
 
 
@@ -1085,6 +1103,7 @@ window.onload = () => {
     podcastCardTwo.onclick = () => {
 
         podcastTwo();
+        
 
     }
 
@@ -1110,6 +1129,7 @@ window.onload = () => {
 
         if (podcastCardTwo.onclick) {
             albumCover.style.display = "block";
+            playerArrow.style.paddingTop = "25px";
         }
 
 
@@ -1329,9 +1349,16 @@ window.onload = () => {
 
         djPopup.style.display = "flex";
 
-        explorePage.style.display = "none";
+        setTimeout(() => {
+            djPopup.style.transform = "translateY(0%)";
+        }, 50);
+        
         playerBarContainer.style.display = "none";
+
+
         stopAllAudio();
+
+        
 
         
     }
@@ -1347,6 +1374,8 @@ window.onload = () => {
         
         djPage.style.display = "flex";
         djPage.style.transform = "translate(0%)";
+
+        djPopup.style.display = "none";
 
      
        
