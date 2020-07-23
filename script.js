@@ -1315,6 +1315,8 @@ window.onload = () => {
 
     const djJerms = document.getElementById("djJerms");
 
+    djJerms.load();
+
 
 
     var djPopup = document.getElementById("djPopup");
@@ -1340,20 +1342,35 @@ window.onload = () => {
 
 
     djPopupButton.onclick = () =>{
+
+        span.innerHTML = "6 Tracks";
         
         djPage.style.display = "flex";
         djPage.style.transform = "translate(0%)";
 
      
-
+       
         djJerms.play();
 
         console.log(djJerms.currentTime);
 
+        
          
 
 
-        /* TRACK ONE HIDE */
+     
+
+
+        /* TRACK TWO HIDE */
+
+
+
+        
+        djJerms.ontimeupdate = () => {
+
+            console.log(djJerms.currentTime);
+
+               /* TRACK ONE HIDE */
 
         setTimeout(() => {
             firstSong[0].style.opacity = "0";
@@ -1367,7 +1384,6 @@ window.onload = () => {
         setTimeout(() => {
             firstSong[0].style.height = "0px";
             firstSong[0].style.marginBottom = "0px";
-            numOfTracks.innerHTML = "2 tracks";
 
         }, 2500);
 
@@ -1375,17 +1391,25 @@ window.onload = () => {
             firstSong[0].style.display = "none";
         }, 4000);
 
+        if (firstSong[0].style.height === "0px"){
+            setTimeout(() => {
+                numOfTracks.innerHTML = "5 tracks";
+            }, 800);
+        }
+
+
         /* END OF TRACK ONE HIDE */
 
 
-        /* TRACK TWO HIDE */
 
 
 
-        
-        djJerms.ontimeupdate = () => {
 
-            console.log(djJerms.currentTime);
+
+
+
+
+
 
             if (djJerms.currentTime > 34.5) { //365
 
@@ -1401,7 +1425,7 @@ window.onload = () => {
                 setTimeout(() => {
                     firstSong[1].style.height = "0px";
                     firstSong[1].style.marginBottom = "0px";
-                    numOfTracks.innerHTML = "1 track";
+                    
 
                 }, 2500);
 
@@ -1409,11 +1433,24 @@ window.onload = () => {
                     firstSong[1].style.display = "none";
                 }, 4000);
 
-                /* END OF TRACK TWO HIDE */
 
             }
 
-             if (djJerms.currentTime > 72.5) { 
+        
+            if (firstSong[1].style.height === "0px"){
+                setTimeout(() => {
+                    numOfTracks.innerHTML = "4 tracks";
+                }, 800);
+            }
+
+            
+
+             /* END OF TRACK TWO HIDE */
+
+
+             /* TRACK THREE HIDE */
+
+             if (djJerms.currentTime > 72.5 && djJerms.currentTime < 129) { 
 
                     setTimeout(() => {
                         firstSong[2].style.opacity = "0";
@@ -1427,17 +1464,128 @@ window.onload = () => {
                     setTimeout(() => {
                         firstSong[2].style.height = "0px";
                         firstSong[2].style.marginBottom = "0px";
-                        numOfTracks.innerHTML = "2 tracks";
     
                     }, 2500);
     
                     setTimeout(() => {
                         firstSong[2].style.display = "none";
                     }, 4000);
-    
-                    /* END OF TRACK TWO HIDE */
+
     
                 }
+
+                if (firstSong[2].style.height === "0px"){
+                    setTimeout(() => {
+                        numOfTracks.innerHTML = "3 tracks";
+                    }, 800);
+                }
+
+                 /* END OF TRACK THRE HIDE */
+
+
+                 /* TRACK FOUR HIDE */
+
+             if (djJerms.currentTime > 129 && djJerms.currentTime < 144) { 
+
+                setTimeout(() => {
+                    firstSong[3].style.opacity = "0";
+                }, 2000);
+
+
+                setTimeout(() => {
+                    firstSong[3].style.transform = "translateX(100%)";
+                }, 2000);
+
+                setTimeout(() => {
+                    firstSong[3].style.height = "0px";
+                    firstSong[3].style.marginBottom = "0px";
+
+                }, 2500);
+
+                setTimeout(() => {
+                    firstSong[3].style.display = "none";
+                }, 4000);
+
+
+            }
+
+            if (firstSong[3].style.height === "0px"){
+                setTimeout(() => {
+                    numOfTracks.innerHTML = "2 tracks";
+                }, 800);
+            }
+
+             /* END OF TRACK THREE HIDE */
+
+
+             /* TRACK FIVE HIDE */
+
+             if (djJerms.currentTime > 145.5 && djJerms.currentTime < 183) { 
+
+                setTimeout(() => {
+                    firstSong[4].style.opacity = "0";
+                }, 2000);
+
+
+                setTimeout(() => {
+                    firstSong[4].style.transform = "translateX(100%)";
+                }, 2000);
+
+                setTimeout(() => {
+                    firstSong[4].style.height = "0px";
+                    firstSong[4].style.marginBottom = "0px";
+
+                }, 2500);
+
+                setTimeout(() => {
+                    firstSong[4].style.display = "none";
+                }, 4000);
+
+
+            }
+
+            if (firstSong[4].style.height === "0px"){
+                setTimeout(() => {
+                    numOfTracks.innerHTML = "1 track";
+                }, 800);
+            }
+
+             /* END OF TRACK FIVE HIDE */
+
+
+             /* TRACK SIX HIDE */
+
+             if (djJerms.currentTime > 184.5) { 
+
+                setTimeout(() => {
+                    firstSong[5].style.opacity = "0";
+                }, 2000);
+
+
+                setTimeout(() => {
+                    firstSong[5].style.transform = "translateX(100%)";
+                }, 2000);
+
+                setTimeout(() => {
+                    firstSong[5].style.height = "0px";
+                    firstSong[5].style.marginBottom = "0px";
+
+                }, 2500);
+
+                setTimeout(() => {
+                    firstSong[5].style.display = "none";
+                }, 4000);
+
+
+            }
+
+            if (firstSong[5].style.height === "0px"){
+                setTimeout(() => {
+                    numOfTracks.innerHTML = " No tracks";
+                }, 800);
+            }
+
+             /* END OF TRACK FIVE HIDE */
             
 
 
