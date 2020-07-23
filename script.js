@@ -1358,6 +1358,11 @@ window.onload = () => {
 
         stopAllAudio();
 
+        if (djPopup.style.display = "flex"){
+
+            document.body.style.overflow = "hidden";
+        }
+
         
 
         
