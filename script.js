@@ -88,7 +88,7 @@ window.onload = () => {
     dismiss.onclick = () =>{
         djPopup.style.transform = "translateY(150%)";
 
-        document.body.style.overflowY = "scroll";
+       
     }
 
 
@@ -1373,6 +1373,7 @@ window.onload = () => {
         stopAllAudio();
 
         document.body.style.overflowY = "hidden";
+
         
     }
 
@@ -1392,8 +1393,7 @@ window.onload = () => {
         djPage.style.transform = "translate(0%)";
 
         djPopup.style.display = "none";
-
-        document.body.style.overflowY = "scroll";
+       
 
         explorePage.style.display = "none";
      
@@ -1401,6 +1401,8 @@ window.onload = () => {
         djJerms.play();
 
         console.log(djJerms.currentTime);
+
+        document.body.style.overflowY = "scroll";
 
      
 
@@ -1646,8 +1648,14 @@ window.onload = () => {
 
         djArrow.onclick = () =>{
             explorePage.style.display = "block";
+
             djPage.style.transform = "translateY(100%)";
-            djPage.style.display = "none";
+            
+            
+                djPage.style.display = "none";
+
+                playerBarContainer.style.display = "flex";
+           
         } 
          
 
