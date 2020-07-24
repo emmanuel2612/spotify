@@ -88,6 +88,8 @@ window.onload = () => {
     dismiss.onclick = () =>{
         djPopup.style.transform = "translateY(150%)";
 
+        document.body.style.overflowY = "auto";
+
        
     }
 
@@ -999,7 +1001,7 @@ window.onload = () => {
         const chale = document.getElementById("chale");
 
         for (var i = 0; i < artistNamePlayer.length; i++) {
-            artistNamePlayer[i].innerHTML = "Chale Let's Gist";
+            artistNamePlayer[i].innerHTML = "Chale Lets Gist";
         }
 
         for (var i = 0; i < songTitlePlayer.length; i++) {
@@ -1136,7 +1138,7 @@ window.onload = () => {
         }
 
         for (var i = 0; i < songTitlePlayer.length; i++) {
-            songTitlePlayer[i].innerHTML = "Podcast Title Here";
+            songTitlePlayer[i].innerHTML = "Black Ppeople In Anime";
         }
 
         albumCover.src = "animatics.jpg";
@@ -1341,7 +1343,7 @@ window.onload = () => {
 
 
     const djPage = document.getElementById("djPage");
-    const djButton = document.getElementById("greeting");
+    const djButton = document.getElementById("headphones");
 
     const firstSong = document.getElementsByClassName("cueBox");
 
@@ -1667,6 +1669,7 @@ window.onload = () => {
 
                 playerBarImage.src = "jerms.jpg"; */
 
+                stopAllAudio();
            
                                 
            
