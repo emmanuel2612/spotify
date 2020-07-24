@@ -1655,6 +1655,27 @@ window.onload = () => {
                 djPage.style.display = "none";
 
                 playerBarContainer.style.display = "flex";
+
+                for (var i = 0; i < artistNamePlayer.length; i++) {
+                    artistNamePlayer[i].innerHTML = "Dj Jerms";
+                }
+        
+                for (var i = 0; i < songTitlePlayer.length; i++) {
+                    songTitlePlayer[i].innerHTML = "Styley Jugglin";
+                }
+
+                playerBarImage.src = "jerms.jpg";
+
+                playerBarContainer.onclick = () =>{
+
+                    djPage.style.display = "flex";
+                    explorePage.style.display = "none";
+
+                    setTimeout(() => {
+                        djPage.style.transform = "translateY(0%)";
+                    }, 0);
+                }
+                
            
         } 
          
