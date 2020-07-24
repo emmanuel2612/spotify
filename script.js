@@ -408,7 +408,7 @@ window.onload = () => {
 
             else if (speed.innerHTML == "2x") {
                 speed.innerHTML = "3x";
-                wizkid_blow.playbackRate = "3;"
+                wizkid_blow.playbackRate = "3"
             }
 
             else if (speed.innerHTML == "3x") {
@@ -576,7 +576,7 @@ window.onload = () => {
 
             else if (speed.innerHTML == "2x") {
                 speed.innerHTML = "3x";
-                kranium_galpolicy.playbackRate = "3;"
+                kranium_galpolicy.playbackRate = "3"
             }
 
             else if (speed.innerHTML == "3x") {
@@ -628,7 +628,7 @@ window.onload = () => {
 
         listenerButton.onclick = () => {
 
-            showListener();
+            showListener(); 
 
             countryName[0].innerHTML = "Jamaica";
             countryName[1].innerHTML = "United Kingdom";
@@ -779,7 +779,7 @@ window.onload = () => {
 
             else if (speed.innerHTML == "2x") {
                 speed.innerHTML = "3x";
-                snoh_dying.playbackRate = "3;"
+                snoh_dying.playbackRate = "3"
             }
 
             else if (speed.innerHTML == "3x") {
@@ -996,14 +996,14 @@ window.onload = () => {
 
         heart.style.display = "none";
 
-        const chaleLetsGist = document.getElementById("chaleLetsGist");
+        const chale = document.getElementById("chale");
 
         for (var i = 0; i < artistNamePlayer.length; i++) {
             artistNamePlayer[i].innerHTML = "Chale Let's Gist";
         }
 
         for (var i = 0; i < songTitlePlayer.length; i++) {
-            songTitlePlayer[i].innerHTML = "Should your friends support";
+            songTitlePlayer[i].innerHTML = "SuPpOrT bLaCk BuSiNeSsEs";
         }
 
         albumCover.src = "chaleletsgist.jfif";
@@ -1016,11 +1016,11 @@ window.onload = () => {
 
 
         setTimeout(() => {
-            snoh_dying.play();
+            chale.play();
         }, 300);
 
         pauseButton.onclick = () => {
-            snoh_dying.pause();
+            chale.pause();
 
             pauseButton.style.display = "none";
             playButton.style.display = "flex";
@@ -1028,7 +1028,7 @@ window.onload = () => {
         }
 
         playButton.onclick = () => {
-            snoh_dying.play();
+            chale.play();
 
             playButton.style.display = "none";
             pauseButton.style.display = "flex";
@@ -1061,37 +1061,37 @@ window.onload = () => {
 
             if (speed.innerHTML == "1x") {
                 speed.innerHTML = "1.2x";
-                snoh_dying.playbackRate = "1.2";
+                chale.playbackRate = "1.2";
             }
 
             else if (speed.innerHTML == "1.2x") {
                 speed.innerHTML = "1.5x";
-                snoh_dying.playbackRate = "1.5";
+                chale.playbackRate = "1.5";
             }
 
             else if (speed.innerHTML == "1.5x") {
                 speed.innerHTML = "2x";
-                snoh_dying.playbackRate = "2";
+                chale.playbackRate = "2";
             }
 
             else if (speed.innerHTML == "2x") {
                 speed.innerHTML = "3x";
-                snoh_dying.playbackRate = "3;"
+                chale.playbackRate = "3"
             }
 
             else if (speed.innerHTML == "3x") {
                 speed.innerHTML = "0.5x";
-                snoh_dying.playbackRate = "0.5";
+                chale.playbackRate = "0.5";
             }
 
             else if (speed.innerHTML == "0.5x") {
                 speed.innerHTML = "0.8x";
-                snoh_dying.playbackRate = "0.8";
+                chale.playbackRate = "0.8";
             }
 
             else if (speed.innerHTML == "0.8x") {
                 speed.innerHTML = "1x";
-                snoh_dying.playbackRate = "1";
+                chale.playbackRate = "1";
             }
 
         }
@@ -1110,7 +1110,7 @@ window.onload = () => {
     /* START OF ANIMATICS */
 
 
-    const podcastCardTwo = document.getElementById("podcastCardTwo");
+    const podcastCardTwo = document.getElementById("podcastCardTwo"); 
 
     podcastCardTwo.onclick = () => {
 
@@ -1122,6 +1122,8 @@ window.onload = () => {
 
 
     const podcastTwo = () => {
+
+        const animatics = document.getElementById("animatics");
 
         stopAllAudio();
 
@@ -1147,11 +1149,11 @@ window.onload = () => {
 
 
         setTimeout(() => {
-            snoh_dying.play();
+            animatics.play();
         }, 300);
 
         pauseButton.onclick = () => {
-            snoh_dying.pause();
+            animatics.pause();
 
             pauseButton.style.display = "none";
             playButton.style.display = "flex";
@@ -1159,7 +1161,7 @@ window.onload = () => {
         }
 
         playButton.onclick = () => {
-            snoh_dying.play();
+            animatics.play();
 
             playButton.style.display = "none";
             pauseButton.style.display = "flex";
@@ -1192,37 +1194,37 @@ window.onload = () => {
 
             if (speed.innerHTML == "1x") {
                 speed.innerHTML = "1.2x";
-                snoh_dying.playbackRate = "1.2";
+                animatics.playbackRate = "1.2";
             }
 
             else if (speed.innerHTML == "1.2x") {
                 speed.innerHTML = "1.5x";
-                snoh_dying.playbackRate = "1.5";
+                animatics.playbackRate = "1.5";
             }
 
             else if (speed.innerHTML == "1.5x") {
                 speed.innerHTML = "2x";
-                snoh_dying.playbackRate = "2";
+                animatics.playbackRate = "2";
             }
 
             else if (speed.innerHTML == "2x") {
                 speed.innerHTML = "3x";
-                snoh_dying.playbackRate = "3;"
+                animatics.playbackRate = "3"
             }
 
             else if (speed.innerHTML == "3x") {
                 speed.innerHTML = "0.5x";
-                snoh_dying.playbackRate = "0.5";
+                animatics.playbackRate = "0.5";
             }
 
             else if (speed.innerHTML == "0.5x") {
                 speed.innerHTML = "0.8x";
-                snoh_dying.playbackRate = "0.8";
+                animatics.playbackRate = "0.8";
             }
 
             else if (speed.innerHTML == "0.8x") {
                 speed.innerHTML = "1x";
-                snoh_dying.playbackRate = "1";
+                animatics.playbackRate = "1";
             }
 
         }
@@ -1370,7 +1372,7 @@ window.onload = () => {
 
         stopAllAudio();
 
-        document.body.style.overflow = "hidden";
+        document.body.style.overflowY = "hidden";
         
     }
 
@@ -1391,16 +1393,14 @@ window.onload = () => {
 
         djPopup.style.display = "none";
 
-        document.body.style.overflow = "scroll";
+        document.body.style.overflowY = "scroll";
+
+        explorePage.style.display = "none";
      
        
         djJerms.play();
 
         console.log(djJerms.currentTime);
-
-        
-         
-
 
      
 
@@ -1635,7 +1635,49 @@ window.onload = () => {
 
 
         }
+
+
+
+
+
+
+
+        var djArrow = document.getElementById("djArrow");
+
+        djArrow.onclick = () =>{
+            explorePage.style.display = "block";
+            djPage.style.transform = "translateY(100%)";
+            djPage.style.display = "none";
+        } 
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
 
 
 
