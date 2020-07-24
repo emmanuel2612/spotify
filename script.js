@@ -1041,7 +1041,7 @@ window.onload = () => {
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
-        playerPage.style.background = "#282828";
+        playerPage.style.background = "#191414";
 
 
 
@@ -1174,7 +1174,7 @@ window.onload = () => {
         playButton.style.display = "none";
         pauseButton.style.display = "flex";
 
-        playerPage.style.background = "#282828";
+        playerPage.style.background = "#191414";
 
 
 
