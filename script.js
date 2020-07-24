@@ -1,4 +1,14 @@
+
+
 window.onload = () => {
+
+    var loadingPage = document.getElementById("loadingPage");
+
+    const hidePage = () =>{
+        loadingPage.style.display = "none";
+    }
+
+    hidePage();
 
     /* MUSIC OBJECTS */
 
@@ -1381,6 +1391,7 @@ window.onload = () => {
 
         djPopup.style.display = "none";
 
+        document.body.style.overflow = "scroll";
      
        
         djJerms.play();
