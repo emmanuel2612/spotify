@@ -77,6 +77,8 @@ window.onload = () => {
 
     dismiss.onclick = () =>{
         djPopup.style.transform = "translateY(150%)";
+
+        document.body.style.overflowY = "scroll";
     }
 
 
@@ -1358,20 +1360,13 @@ window.onload = () => {
 
         stopAllAudio();
 
-        if (djPopup.style.transform = "translateY(150%)"){
-
-            document.body.style.overflow = "scroll";
-        }
-
-        else if (djPopup.style.transform = "translateY(0%)"){
-            document.body.style.overflow = "hidden";
-        }
-
-        
-
+        document.body.style.overflow = "hidden";
         
     }
 
+   
+
+   
 
     
 
