@@ -67,7 +67,7 @@ window.onload = () => {
     let speed = document.getElementById("speed");
 
     const backButton = document.getElementById("backContainer");
-    const forwardButton = document.getElementById("forwardContainer");
+    const forwardButton = document.getElementById("forwardContainer"); 
 
     var playerBarContainer = document.getElementById("playerBarContainer");
     var playerBarImage = document.getElementById("playerBarImage");
@@ -294,6 +294,7 @@ window.onload = () => {
 
             heart.classList.remove("clickHeart");
         }
+        
 
 
     }
