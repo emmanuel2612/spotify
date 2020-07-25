@@ -1,11 +1,15 @@
 
-
 window.onload = () => {
+    
 
     var loadingPage = document.getElementById("loadingPage");
 
     const hidePage = () =>{
-        loadingPage.style.display = "none";
+        setTimeout(() => {
+            loadingPage.style.display = "none";
+        }, 1000);
+        
+        
     }
 
     hidePage();
