@@ -306,6 +306,8 @@ window.onload = () => {
 
     cardOne.onclick = () => {
 
+        heart.style.display = "inline-block";
+
         songOne();
 
 
@@ -469,6 +471,8 @@ window.onload = () => {
 
     cardTwo.onclick = () => {
 
+        heart.style.display = "inline-block";
+
         songTwo();
 
         
@@ -628,6 +632,8 @@ window.onload = () => {
     }
 
     cardThree.onclick = () => {
+
+        heart.style.display = "inline-block";
 
         songThree();
 
@@ -830,6 +836,8 @@ window.onload = () => {
     }
 
     cardFour.onclick = () => {
+
+        heart.style.display = "inline-block";
 
         songFour();
 
