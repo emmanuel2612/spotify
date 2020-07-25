@@ -1143,7 +1143,7 @@ window.onload = () => {
         }
 
         for (var i = 0; i < songTitlePlayer.length; i++) {
-            songTitlePlayer[i].innerHTML = "Black Ppeople In Anime";
+            songTitlePlayer[i].innerHTML = "Black People In Anime";
         }
 
         albumCover.src = "animatics.jpg";
